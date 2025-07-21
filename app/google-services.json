@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1001500326813",
+    "project_id": "tahirapp-cdf77",
+    "storage_bucket": "tahirapp-cdf77.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1001500326813:android:f0f2fbb11dd8de65df0d74",
+        "android_client_info": {
+          "package_name": "com.example.tahirapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqjuHjaHlYAKjPinh1cUr_mOlDKLFEeO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
