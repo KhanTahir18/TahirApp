@@ -11,30 +11,30 @@ import com.example.tahirapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
+    private lateinit var patientList: ArrayList<Patients>
+    private lateinit var adapter: PatientAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-       // var resultText = findViewById<TextView>(R.id.resText)
-       // val userInput1 = binding.editText1
-        binding.btnPlus.setOnClickListener {
-            val userInput1:String = binding.editText1.text.toString()
-            Toast.makeText(this, "You: $userInput1", Toast.LENGTH_SHORT).show()
-            val userNum1 = userInput1.toIntOrNull()
 
-            val userInput2:String = binding.editText2.text.toString()
-            Toast.makeText(this, "You: $userInput1", Toast.LENGTH_SHORT).show()
-            val userNum2 = userInput2.toIntOrNull()
+        initData()
 
-            var addN = userNum1?.plus(userNum2!!)
-
-            var resultText = findViewById<TextView>(R.id.resText)
-            resultText.text = addN.toString()
-                   }
-
-        //hello
-        //new
-        //bye
+        adapter = PatientAdapter(patientList)
+        binding.recyclerView.adapter = adapter
     }
+
+    private fun initData() {
+        patientList = arrayListOf(
+            Patients("Tahir", "Has diabetes"),
+            Patients("Tahir2", "Has anxiety"),
+            Patients("Tahir3", "Flu and fever"),
+            Patients("Tahi4", "Back pain"),
+            Patients("Tahi5", "Blood pressure"),
+            Patients("Tahi6r", "Skin allergy"),
+            Patients("Tahi6wer", "Asthma")
+        )
+    }
+
+
 }
