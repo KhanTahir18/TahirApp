@@ -8,92 +8,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/appBackgroundColor">
+    android:background="@color/white" >
 
     <EditText
-        android:id="@+id/edit_text1"
-        android:layout_width="match_parent"
+        android:id="@+id/imageNameEditText"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/Text1"
-        android:padding="10dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@color/EditTextColor"
-        android:inputType="numberDecimal"
-        app:layout_constraintTop_toTopOf="@id/main"
-        tools:ignore="MissingConstraints" />
+        android:hint="Enter image name"
+        android:padding="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
 
-    <EditText
-        android:id="@+id/edit_text2"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/uploadImageBtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/Text1"
-        android:padding="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/EditTextColor"
-        android:inputType="numberDecimal"
-        app:layout_constraintTop_toBottomOf="@id/edit_text1"/>
+        android:text="Upload Image"
+        app:layout_constraintTop_toBottomOf="@id/imageNameEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
 
-    <TextView
-        android:id="@+id/resText"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/viewPhotosBtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Res"
-        android:textColor="@color/EditTextColor"
-        android:textSize="20sp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="sans-serif-black"
-        app:layout_constraintTop_toBottomOf="@id/edit_text2"
-        />
-
-        <GridLayout
-            android:id="@+id/Grid"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:columnCount="4"
-
-            app:layout_constraintTop_toBottomOf="@+id/resText"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:paddingLeft="30dp"
-            >
-
-
-
-            <Button android:text="+"
-                android:textColor="@color/white"
-                android:id="@+id/btnPlus"/>
-
-
-            <Button android:text="-"
-                android:textColor="@color/white"
-                android:id="@+id/btnMin"/>
-
-
-            <Button android:text="x"
-                android:textColor="@color/white"
-                android:id="@+id/btnMul"/>
-
-            <Button android:text="/"
-                android:textColor="@color/white"
-                android:id="@+id/btnDiv"/>
-
-        </GridLayout>
-
-
-
-
-
-
-
-
-
-
-
-
+        android:text="View Photos"
+        app:layout_constraintTop_toBottomOf="@id/uploadImageBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

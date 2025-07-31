@@ -15,6 +15,7 @@ firebaseAuth = "23.2.1"
 firebaseCrashlytics = "19.4.4"
 googleFirebaseCrashlytics = "3.0.4"
 firebaseDatabase = "21.0.0"
+sdkForAndroid = "8.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -29,6 +30,7 @@ firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics", version.ref = "firebaseCrashlytics" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+appwrite-sdk = { module = "io.appwrite:sdk-for-android", version.ref = "sdkForAndroid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
